@@ -6,13 +6,21 @@ const LoginButtonStyle = styled.button`
     background-color: hsl(206deg 100% 52%);
     color: white;
     border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    :hover {
+      cursor: pointer;
+    }
+    :active {
+      background-color: hsl(209deg 100% 26%);
+    }
   }
 `;
 
 const LoginButton = props => {
   return (
     <LoginButtonStyle>
-      <button className={props.className} onClick={props.onClick}>
+      <button type='submit' className={props.className} onClick={props.onClick}>
         Log in
       </button>
     </LoginButtonStyle>
