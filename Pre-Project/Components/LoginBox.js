@@ -1,43 +1,77 @@
-import styled from 'styled-components';
-
-const BoxStyle = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  .formContainer {
-    background-color: white;
-    display: grid;
-    grid-column-start: 2;
-    grid-row-start: 3;
-    padding: 24px;
-    width: 240px;
-    height: 188px;
-  }
-  .loginForm {
-    display: grid;
-    grid-template-rows: repeat(4, 1fr);
-    padding-bottom: 10px;
-  }
-`;
+import LoginButton from '../Buttons';
+import { GoogleButton, GithubButton, FacebookButton } from './OAuthBottons';
+import BoxStyle from '../Login/LoginStyle';
+import { useState } from 'react';
 
 const LoginBox = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [errorMessageE, setErrorMessageE] = useState('');
+  const [errorMessageP, setErrorMessageP] = useState('');
+
+  const handleEmail = e => {
+    setEmail(e.target.value);
+  };
+
+  const handlePassword = e => {
+    setPassword(e.target.value);
+  };
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    const emailError = !email.trim() ? 'Email cannot be empty' : '';
+    const passwordError = !password.trim() ? 'Password cannot be empty' : '';
+
+    setErrorMessageE(emailError);
+    setErrorMessageP(passwordError);
+  };
+
+  const handleClick = () => {
+    console.log('Button clicked!');
+  };
+
   return (
-    <>
-      <div className='LoginBox'>
-        <BoxStyle>
-          <div className='formContainer'>
-            <div className='loginForm'>
-              <div>Email</div>
-              <input type='Email' />
-              <div>Password</div>
-              <input type='Password' />
+    <BoxStyle>
+      <div className='login-box'>
+        <div className='oauth-box'>
+          <GoogleButton />
+          <GithubButton />
+          <FacebookButton />
+        </div>
+        <div className='Container'>
+          <form className='login-form' onSubmit={handleSubmit}>
+            <div className='email-container'>
+              <h1>Email</h1>
+              <input
+                type='email'
+                value={email}
+                onChange={handleEmail}
+                className='login__text'
+              />
+              {errorMessageE && (
+                <div style={{ color: 'red' }}>{errorMessageE}</div>
+              )}
             </div>
-            <button type='submit'> Login </button>
-          </div>
-        </BoxStyle>
+            <div className='password-container'>
+              <h1>Password</h1>
+              <input
+                type='password'
+                value={password}
+                onChange={handlePassword}
+                className='login__text'
+              />
+              {errorMessageP && (
+                <div style={{ color: 'red' }}>{errorMessageP}</div>
+              )}
+            </div>
+            <LoginButton className='login__button' onClick={handleClick} />
+          </form>
+        </div>
       </div>
-    </>
+    </BoxStyle> 
   );
 };
+// git push origin  feat/pre-project
+// git commit -m '19일 작업물'
 
 export default LoginBox;
