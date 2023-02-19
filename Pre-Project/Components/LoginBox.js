@@ -71,7 +71,7 @@ const LoginBox = () => {
     </BoxStyle> 
   );
 };
-// git push origin  feat/pre-project
+//  git push origin  feat/pre-project
 // git commit -m '19일 작업물'
 
 export default LoginBox;
