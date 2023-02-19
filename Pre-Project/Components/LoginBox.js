@@ -68,7 +68,7 @@ const LoginBox = () => {
           </form>
         </div>
       </div>
-    </BoxStyle>
+    </BoxStyle> 
   );
 };
 
