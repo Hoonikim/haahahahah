@@ -1,32 +1,32 @@
 import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faGoogle,
-  faGithub,
-  faFacebook
-} from '@fortawesome/free-brands-svg-icons';
+  Googlelogo,
+  GitHublogo,
+  Facebooklogo
+} from '../../assets/Login_assets/Logos';
 
 const ButtonWrapper = styled.button`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: white;
-  color: black;
-  border: none;
+  background-color: ${({ bgColor }) => bgColor};
+  color: ${({ color }) => color};
+  border: 1px solid gainsboro;
   border-radius: 5px;
-  width: 200px;
-  height: 50px;
+  width: 100%;
+  height: ${({ height }) => height};
   cursor: pointer;
-  margin: 10px;
   transition: background-color 0.2s;
-
+  font-size: 15px;
   &:hover {
-    background-color: grey;
-    font-size: 12px;
+    background-color: ${({ hoverBgColor }) => hoverBgColor};
   }
-
   .icon {
     margin-right: 10px;
+  }
+  ${({ isLoginButton }) =>
+    isLoginButton && `box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.25);`}
+  .span-style {
+    display: inline-flex;
+    align-items: center;
+    font-size: 13px;
   }
 `;
 
@@ -37,22 +37,28 @@ const GoogleButton = () => {
       color='#000'
       hoverBgColor='#eee'
       activeBgColor='#ddd'
+      height='42px'
     >
-      <FontAwesomeIcon icon={faGoogle} className='icon' />
-      Log in with Google
+      <span className='span-style'>
+        <Googlelogo className='icon' />
+        Log in with Google
+      </span>
     </ButtonWrapper>
   );
 };
+
 const GithubButton = () => {
   return (
     <ButtonWrapper
-      bgColor='#000'
+      bgColor='#222'
       color='#fff'
-      hoverBgColor='#222'
+      hoverBgColor='#000'
       activeBgColor='#333'
+      height='42px'
     >
-      <FontAwesomeIcon icon={faGithub} className='icon' />
-      Log in with GitHub
+      <span className='span-style'>
+        <GitHublogo className='icon' /> Log in with GitHub
+      </span>
     </ButtonWrapper>
   );
 };
@@ -64,11 +70,29 @@ const FacebookButton = () => {
       color='#fff'
       hoverBgColor='#2f477a'
       activeBgColor='#293e69'
+      height='42px'
     >
-      <FontAwesomeIcon icon={faFacebook} className='icon' />
-      Log in with Facebook
+      <span className='span-style'>
+        <Facebooklogo className='icon' />
+        Log in with Facebook
+      </span>
     </ButtonWrapper>
   );
 };
 
-export { GoogleButton, GithubButton, FacebookButton };
+const LoginButton = () => {
+  return (
+    <ButtonWrapper
+      bgColor='#0895ff'
+      color='#fff'
+      hoverBgColor='#2f477a'
+      activeBgColor='#293e69'
+      height='42px'
+      isLoginButton
+    >
+      Log in
+    </ButtonWrapper>
+  );
+};
+
+export { GoogleButton, GithubButton, FacebookButton, LoginButton };
