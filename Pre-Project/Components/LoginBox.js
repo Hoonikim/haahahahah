@@ -1,14 +1,8 @@
-import {
-  GoogleButton,
-  GithubButton,
-  FacebookButton,
-  LoginButton
-} from './OAuthBottons';
+import { GoogleBtn, GithubBtn, FacebookBtn, GeneralBtn } from '../Buttons';
 import BoxStyle from '../Login/LoginStyle';
-
 import { useState } from 'react';
-import { StackOverlogo } from '../../assets/Login_assets/Logos';
-import { ErrorIcon, SignUpIcon } from '../../assets/Login_assets/Icons';
+import { SOiconSVG } from '../../../assets/CommonSVG';
+import { ErrorSVG, SignUpSVG } from '../../../assets/LoginSVG';
 
 const LoginBox = () => {
   const [email, setEmail] = useState('');
@@ -50,13 +44,13 @@ const LoginBox = () => {
           <div className='all-oauth-box'>
             <div className='logo-box'>
               <div className='logo'>
-                <StackOverlogo />
+                <SOiconSVG />
               </div>
             </div>
             <div className='oauth-box'>
-              <GoogleButton />
-              <GithubButton />
-              <FacebookButton />
+              <GoogleBtn />
+              <GithubBtn />
+              <FacebookBtn />
             </div>
           </div>
           {/* 로그인 박스  */}
@@ -74,7 +68,7 @@ const LoginBox = () => {
                   />
                   {errorMessages.email && (
                     <div className='error-svg'>
-                      <ErrorIcon />
+                      <ErrorSVG />
                     </div>
                   )}
                 </div>
@@ -94,7 +88,7 @@ const LoginBox = () => {
                   />
                   {errorMessages.password && (
                     <div className='error-svg'>
-                      <ErrorIcon />
+                      <ErrorSVG />
                     </div>
                   )}
                 </div>
@@ -102,7 +96,7 @@ const LoginBox = () => {
                   <div style={{ color: 'red' }}>{errorMessages.password}</div>
                 )}
               </div>
-              <LoginButton onClick={handleClick} />
+              <GeneralBtn onClick={handleClick} />
             </form>
           </div>
           {/* Support Message */}
@@ -113,7 +107,7 @@ const LoginBox = () => {
             <div>
               Are you an employer?
               <a href='/'>
-                Sign up on Talent <SignUpIcon className='signup-icon' />
+                Sign up on Talent <SignUpSVG className='signup-icon' />
               </a>
             </div>
           </div>
