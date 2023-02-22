@@ -9,7 +9,7 @@ const InputboxStyle = styled.div`
   .signup-form__text {
     border: 1px solid black;
     border-radius: 5px;
-    height: 35px;
+    height: 35px; 
     width: 100%;
     margin: 5px 0;
   }
