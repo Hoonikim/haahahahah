@@ -115,7 +115,7 @@ const Inputbox = () => {
               <ErrorPosition>
                 {errorMessages.email && <ErrorSVG className='error-svg' />}
               </ErrorPosition>
-            </div>
+            </div> 
             <ErrorMessages>
               {errorMessages.email && <div>{errorMessages.email}</div>}
             </ErrorMessages>
