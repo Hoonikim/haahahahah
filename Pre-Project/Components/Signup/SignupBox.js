@@ -30,7 +30,7 @@ const BoxStyle = styled.div`
         font-size: 14px;
         color: hsl(206deg 100% 40%);
         margin-left: 5px;
-        :hover {
+        :hover { 
           color: hsl(206deg 100% 52%);
         }
       }
