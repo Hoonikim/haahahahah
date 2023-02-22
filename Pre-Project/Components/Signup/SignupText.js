@@ -21,7 +21,7 @@ const TextStyle = styled.div`
       }
     }
   }
-`;
+`; 
 
 const SignupText = () => {
   return (
