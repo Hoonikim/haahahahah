@@ -14,7 +14,7 @@ const OAuthBox = () => {
     <>
       <OAuthBoxStyle>
         <div className='oauth-box'>
-          <GoogleBtn />
+          <GoogleBtn /> 
           <GithubBtn />
           <FacebookBtn />
         </div>
