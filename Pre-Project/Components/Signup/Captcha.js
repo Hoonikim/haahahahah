@@ -87,7 +87,7 @@ const CaptchaLogoImg = styled.img`
   height: 40px;
   position: relative;
   bottom: 10px;
-  left: 30px;
+  left: 30px; 
 `;
 
 const Captcha = () => {
