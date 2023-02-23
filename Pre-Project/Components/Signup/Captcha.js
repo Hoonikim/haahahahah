@@ -78,7 +78,7 @@ const Messages = styled.div`
 `;
 const Text = styled.div`
   font-size: 17px;
-  position: relative;
+  position: relative; 
   bottom: 15px;
   left: 40px;
 `;
