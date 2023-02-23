@@ -122,7 +122,7 @@ const Inputbox = () => {
         type='email'
         className='signup-form__text'
         name='email'
-        id='email'
+        id='email' 
         value={email}
         onChange={handleInput}
       />
