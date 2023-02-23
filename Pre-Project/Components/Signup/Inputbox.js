@@ -57,14 +57,14 @@ const Inputbox = () => {
       setPassword(value);
       setErrorMessages({ ...errorMessages, password: '' });
     } else if (name === 'displayname') {
-      setname(value);
-      setErrorMessages({ ...errorMessages, name: '' });
+      setname(value); 
+      setErrorMessages({ ...errorMessages, name: '' }); 
     }
   };
 
   // login-button 제출 에러
   const handleSubmit = e => {
-    e.preventDefault();
+    e.preventDefault(); 
     const nameError = !email.trim() ? 'displayname cannot be empty' : '';
     const emailError = !email.trim() ? 'Email cannot be empty' : '';
     const passwordError = !password.trim() ? 'Password cannot be empty' : '';

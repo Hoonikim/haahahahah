@@ -122,7 +122,7 @@ const Inputbox = () => {
         type='email'
         className='signup-form__text'
         name='email'
-        id='email'
+        id='email' 
         value={email}
         onChange={handleInput}
       />
@@ -141,7 +141,7 @@ const Inputbox = () => {
       {errorMessages.password && (
         <ErrorMessages>
           {errorMessages.password}
-          <ErrorPosition>
+          <ErrorPosition> 
             <ErrorSVG />
           </ErrorPosition>
         </ErrorMessages>

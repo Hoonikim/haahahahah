@@ -1,7 +1,7 @@
 import { GoogleBtn, GithubBtn, FacebookBtn } from '../common/Buttons';
 import styled from 'styled-components';
 
-const OAuthBoxStyle = styled.div`
+const OAuthBoxStyle = styled.div` 
   .oauth-box {
     display: grid;
     grid-template-rows: repeat(3, 1fr);

@@ -22,7 +22,7 @@ const ButtonWrapper = styled.button`
     align-items: center;
     font-size: 13px;
   }
-`;
+`; 
 
 const GoogleBtn = () => {
   return (
