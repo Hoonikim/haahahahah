@@ -60,7 +60,7 @@ const BoxStyle = styled.div`
     top: 12px;
     left: 230px;
     @media (max-width: 640px) {
-      left: 190px;
+      left: 190px; 
     }
   }
   .support-messages {

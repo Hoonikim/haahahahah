@@ -64,7 +64,7 @@ const Inputbox = () => {
 
   // login-button 제출 에러
   const handleSubmit = e => {
-    e.preventDefault();
+    e.preventDefault(); 
     const nameError = !email.trim() ? 'displayname cannot be empty' : '';
     const emailError = !email.trim() ? 'Email cannot be empty' : '';
     const passwordError = !password.trim() ? 'Password cannot be empty' : '';

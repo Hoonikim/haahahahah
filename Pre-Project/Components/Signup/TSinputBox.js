@@ -141,7 +141,7 @@ const Inputbox = () => {
       {errorMessages.password && (
         <ErrorMessages>
           {errorMessages.password}
-          <ErrorPosition>
+          <ErrorPosition> 
             <ErrorSVG />
           </ErrorPosition>
         </ErrorMessages>
