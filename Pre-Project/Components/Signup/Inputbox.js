@@ -57,8 +57,8 @@ const Inputbox = () => {
       setPassword(value);
       setErrorMessages({ ...errorMessages, password: '' });
     } else if (name === 'displayname') {
-      setname(value);
-      setErrorMessages({ ...errorMessages, name: '' });
+      setname(value); 
+      setErrorMessages({ ...errorMessages, name: '' }); 
     }
   };
 
