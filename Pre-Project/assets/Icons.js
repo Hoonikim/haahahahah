@@ -14,7 +14,7 @@ export const ErrorIcon = () => {
       </svg>
     );
   };
-  
+   
   export const SignUpIcon = () => {
     return (
       <svg
