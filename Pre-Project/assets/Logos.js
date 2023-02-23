@@ -61,7 +61,7 @@ export const Googlelogo = () => {
     );
   };
   export const StackOverlogo = () => {
-    return (
+    return ( 
       <svg
         aria-hidden='true'
         className='native svg-icon iconLogoGlyphMd'
