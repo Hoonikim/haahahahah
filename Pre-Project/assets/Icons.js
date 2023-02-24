@@ -30,4 +30,4 @@ export const ErrorIcon = () => {
         ></path>
       </svg>
     );
-  };
+  };   
