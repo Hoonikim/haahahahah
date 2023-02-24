@@ -145,7 +145,7 @@ const Inputbox = () => {
             <ErrorSVG />
           </ErrorPosition>
         </ErrorMessages>
-      )}
+      )} 
       <p className='Password-message'>
         Passwords must be at least 8 characters long.
       </p>
