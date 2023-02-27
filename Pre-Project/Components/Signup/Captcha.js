@@ -89,7 +89,7 @@ const CaptchaLogoImg = styled.img`
   bottom: 10px; 
   left: 30px; 
 `;
-
+ 
 const Captcha = () => {
   const [isChecked, setIsChecked] = useState(false);
 
