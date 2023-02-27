@@ -216,7 +216,7 @@ const Footer = () => {
             <div className='footer-right'>
               <div className='footer-right__top'>
                 <ul>
-                  <li>Blog</li>
+                  <li>Blog</li> 
                   <li>Facebook</li>
                   <li>Twitter</li>
                   <li>Instagram</li>
