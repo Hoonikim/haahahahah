@@ -46,13 +46,13 @@ const UsersNavigation = styled.nav`
 export default function UserNav() {
   return (
     <UsersNavigation>
-      <ol>
+      <ol>  
         <li>
           <a href='/#'>
-            <img
+            <img  
               src='https://lh3.googleusercontent.com/a/AEdFTp6G9ZfXKo7FPo_1fE9FtMz6i7hPnBBBdbF-WjOv=k-s48'
               alt='user'
-            ></img>
+            ></img>  
           </a>
           <span>1</span>
         </li>
