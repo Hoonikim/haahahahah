@@ -5,7 +5,7 @@ const TextStyle = styled.div`
   grid-template-columns: repeat(2, 1fr);
   .text-box {
     height: 300px;
-    background-color: #f9f9f9;
+    background-color: #f1f2f3;
     grid-column-start: 2;
 
     > h1 {
@@ -21,7 +21,7 @@ const TextStyle = styled.div`
       }
     }
   }
-`; 
+`;
 
 const SignupText = () => {
   return (
@@ -48,9 +48,9 @@ const SignupText = () => {
             <p>
               Collaborate and share knowledge with a private group for FREE.
               <br />
-              <a href='/' style={{ color: '#0895ff' }}>
+              <span style={{ color: '#0895ff' }}>
                 Get Stack Overflow for Teams free for up to 50 users.
-              </a>
+              </span>
             </p>
           </div>
         </div>
