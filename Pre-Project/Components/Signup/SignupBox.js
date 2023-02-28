@@ -2,6 +2,7 @@ import OAuthBox from './OAuthbox';
 import Inputbox from './Inputbox';
 import { SignUpSVG } from '../../assets/LoginSVG';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const BoxStyle = styled.div`
   .all-box {
@@ -30,7 +31,7 @@ const BoxStyle = styled.div`
         font-size: 14px;
         color: hsl(206deg 100% 40%);
         margin-left: 5px;
-        :hover { 
+        :hover {
           color: hsl(206deg 100% 52%);
         }
       }
@@ -51,13 +52,13 @@ const SignupBox = () => {
           </div>
           <div className='support-messages'>
             <div>
-              Already have an accout? <a href='/'> Log in </a>
+              Already have an accout? <Link to='/login'> Log in </Link>
             </div>
             <div>
               Are you an employer?
-              <a href='/'>
+              <Link to='/'>
                 Sign up on Talent <SignUpSVG className='signup-icon' />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
