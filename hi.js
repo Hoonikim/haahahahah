@@ -18,7 +18,7 @@ const CommentContainer = styled.div`
       font-size: 13px;
       &:hover {
         color: #0069c1;
-      }
+      } 
     }
   }
 `;
@@ -70,7 +70,7 @@ const AddCommentContainer = styled.div`
     border-radius: 10px;
     margin-right: 8px;
     padding: 6px;
-    font-size: 11px;
+    font-size: 13px;
     line-height: 19.5px;
     white-space: normal;
     &:focus {
@@ -110,7 +110,7 @@ function Comment({
   const [onEdit, setOnEdit] = useState('');
 
   const handleAddComment = () => {
-    const newCommentInput = { content: newComment };
+    const newCommentInput = { userId: 1, content: newComment };
 
     if (init === questionCommentData) {
       axios
@@ -120,12 +120,10 @@ function Comment({
             Refresh: `${refreshToken}`
           }
         })
-        .then(() => {
-          window.location.href = `/question/${questionId}`;
-        })
-        .catch(err =>
-          handleAddCommentError(err, `/question/${questionId}/comment`)
-        );
+        .then(res => {
+          setQuestionCommentData(res.data);
+          setNewComment('');
+        });
     } else if (init === answerCommentData) {
       axios
         .post(
@@ -138,142 +136,48 @@ function Comment({
             }
           }
         )
-        .then(() => {
-          window.location.href = `/question/${questionId}`;
-        })
-        .catch(err =>
-          handleAddCommentError(
-            err,
-            `/question/${questionId}/answer/${answerId}/comment`
-          )
-        );
-    }
-  };
-  const handleAddCommentError = (err, endpoint) => {
-    const newCommentInput = { content: newComment };
-    if (err.response.status === 401) {
-      const newAccessToken = err.response.headers.authorization;
-      const newRefreshToken = err.response.headers.refresh;
-
-      localStorage.removeItem('accessToken');
-      localStorage.removeItem('refreshToken');
-
-      localStorage.setItem('accessToken', newAccessToken);
-      localStorage.setItem('refreshToken', newRefreshToken);
-
-      axios
-        .post(endpoint, newCommentInput, {
-          headers: {
-            Authorization: `Bearer ${newAccessToken}`,
-            Refresh: `${newRefreshToken}`
-          }
-        })
-        .then(() => {
-          window.location.href = `/question/${questionId}`;
-        })
-        .catch(err => handleAddCommentError(err, endpoint));
+        .then(res => {
+          console.log('commentdata:', res);
+          setAnswerCommentData(res.data);
+          setNewComment('');
+        });
     }
   };
 
   const handleEditComment = e => {
     setOnEdit(!onEdit);
-    // console.log('e:', e.target);
-  };
-
-  const handleDeleteComment = commentId => {
-    if (init === questionCommentData) {
-      axios
-        .delete(`/question/${questionId}/comment/${commentId}`, {
-          headers: {
-            Authorization: `Bearer ${accessToken}`,
-            Refresh: `${refreshToken}`
-          }
-        })
-        .then(() => {
-          window.location.href = `/question/${questionId}`;
-        })
-        .catch(err =>
-          handleDeleteCommentError(
-            err,
-            `/question/${questionId}/comment/${commentId}`
-          )
-        );
-    } else if (init === answerCommentData) {
-      axios
-        .delete(
-          `/question/${questionId}/answer/${answerId}/comment/${commentId}`,
-          {
-            headers: {
-              Authorization: `Bearer ${accessToken}`,
-              Refresh: `${refreshToken}`
-            }
-          }
-        )
-        .then(() => {
-          window.location.href = `/question/${questionId}`;
-        })
-        .catch(err =>
-          handleDeleteCommentError(
-            err,
-            `/question/${questionId}/answer/${answerId}/comment/${commentId}`
-          )
-        );
-    }
-  };
-  const handleDeleteCommentError = (err, endpoint) => {
-    if (err.response.status === 401) {
-      const newAccessToken = err.response.headers.authorization;
-      const newRefreshToken = err.response.headers.refresh;
-
-      localStorage.removeItem('accessToken');
-      localStorage.removeItem('refreshToken');
-
-      localStorage.setItem('accessToken', newAccessToken);
-      localStorage.setItem('refreshToken', newRefreshToken);
-
-      axios
-        .delete(endpoint, {
-          headers: {
-            Authorization: `Bearer ${newAccessToken}`,
-            Refresh: `${newRefreshToken}`
-          }
-        })
-        .then(() => {
-          window.location.href = `/question/${questionId}`;
-        })
-        .catch(err => handleAddCommentError(err, endpoint));
-    }
+    console.log('e:', e.target);
   };
 
   const accessToken = localStorage.getItem('accessToken');
   const refreshToken = localStorage.getItem('refreshToken');
-  const LogginUserId = Number(localStorage.getItem('userId'));
 
   return (
     <>
       {init && (
         <CommentContainer>
-          {init.map(comment => (
-            <CommentWrapper key={comment.commentId}>
+          {init.map((comment, idx) => (
+            <CommentWrapper
+              key={
+                init === questionCommentData
+                  ? comment.questionCommentId
+                  : comment.answerCommentId
+              }
+            >
               <p className='content'>{comment.content}</p>
               <div>
                 <span className='name'>{comment.name}</span>
                 <span className='date'>
                   {comment.createdAt.replace(/^(\d{4}-\d{2}-\d{2}).*/, '$1')}
                 </span>
-                {LogginUserId === comment.userId ? (
-                  <>
-                    <button className='edit-btn' onClick={handleEditComment}>
-                      Edit
-                    </button>
-                    <button
-                      className='delete-btn'
-                      onClick={() => handleDeleteComment(comment.commentId)}
-                    >
-                      X
-                    </button>
-                  </>
-                ) : null}
+                <button
+                  id={idx}
+                  className='edit-btn'
+                  onClick={handleEditComment}
+                >
+                  Edit
+                </button>
+                <button className='delete-btn'>X</button>
               </div>
             </CommentWrapper>
           ))}
@@ -309,4 +213,3 @@ function Comment({
 }
 
 export default Comment;
-  
