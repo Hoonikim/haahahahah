@@ -113,7 +113,7 @@ const LoginBox = () => {
               </div>
               <div className='login-form__password'>
                 <h1>Password</h1>
-                <div style={{ position: 'relative' }}>
+                <div style={{ position: 'relative' }}> 
                   <input
                     type='password'
                     name='password'

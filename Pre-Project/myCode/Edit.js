@@ -357,6 +357,6 @@ export function AnswerEditMain() {
           Cancel
         </QECancelBtn>
       </div>
-    </QEditContainer>
+    </QEditContainer> 
   );  
 }
