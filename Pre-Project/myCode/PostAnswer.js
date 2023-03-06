@@ -116,7 +116,7 @@ export default PostAnswer;
     white-space: normal;
     margin-bottom: 15px;
     border: 1px solid #b1b7bc; */
-/* &:focus {
+/* &:focus { 
       border: 1px solid #409ad6; 
       box-shadow: 0 0 0 4px #d9e9f6;
       outline: none;
