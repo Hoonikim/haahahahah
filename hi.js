@@ -5,7 +5,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
-const CommentContainer = styled.div`
+const CommentContainer = styled.div` 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
