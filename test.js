@@ -51,4 +51,4 @@
         })
         .catch(handleAddCommentErrorA);
     }
-  }; 
+  };  
