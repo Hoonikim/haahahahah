@@ -105,14 +105,14 @@ const LoginBox = () => {
                   />
                   {emailError && (
                     <div className='error-svg'>
-                      <ErrorSVG />
+                      <ErrorSVG /> 
                     </div>
                   )}
                 </div>
                 {emailError && <div style={{ color: 'red' }}>{emailError}</div>}
               </div>
               <div className='login-form__password'>
-                <h1>Password</h1>
+                <h1>Password</h1> 
                 <div style={{ position: 'relative' }}> 
                   <input
                     type='password'
