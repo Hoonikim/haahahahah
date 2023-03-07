@@ -76,5 +76,5 @@ export const Googlelogo = () => {
         ></path>
       </svg>
     );
-  };
+  }; 
    
