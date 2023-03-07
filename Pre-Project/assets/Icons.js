@@ -22,7 +22,7 @@ export const ErrorIcon = () => {
         className='va-text-bottom sm:d-none svg-icon iconShareSm'
         width='14'
         height='14'
-        viewBox='0 0 14 14'
+        viewBox='0 0 14 14' 
       >
         <path
           fill='hsl(206deg 100% 40%)'

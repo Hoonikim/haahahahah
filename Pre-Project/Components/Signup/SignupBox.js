@@ -43,7 +43,7 @@ const SignupBox = () => {
   return (
     <>
       <BoxStyle>
-        <div className='all-box'>
+        <div className='all-box'> 
           <div className='all-oauth-box'>
             <OAuthBox />
           </div>

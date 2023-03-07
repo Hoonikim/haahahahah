@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 function App() {
   return (
     <> 
-      <GlobalStyles />
+      <GlobalStyles /> 
       <BrowserRouter>
         <Routes>
           <Route path='/login' element={<LoginP />} />
