@@ -17,7 +17,7 @@ export const ErrorIcon = () => {
    
   export const SignUpIcon = () => {
     return (
-      <svg
+      <svg 
         aria-hidden='true'
         className='va-text-bottom sm:d-none svg-icon iconShareSm'
         width='14'
