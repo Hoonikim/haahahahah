@@ -132,7 +132,7 @@ const Inputbox = () => {
       <label htmlFor='password'>Password</label>
       <input
         type='password'
-        className='signup-form__text'
+        className='signup-form__text' 
         name='password'
         id='password'
         value={password}
