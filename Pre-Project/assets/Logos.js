@@ -60,7 +60,7 @@ export const Googlelogo = () => {
       </svg>
     );
   };
-  export const StackOverlogo = () => {
+  export const StackOverlogo = () => { 
     return ( 
       <svg
         aria-hidden='true'

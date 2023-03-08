@@ -7,7 +7,7 @@ const BoxStyle = styled.div`
     grid-template-rows: repeat(3, 1fr);
     row-gap: 20px;
     width: 307.09px;
-    @media (max-width: 640px) {
+    @media (max-width: 640px) { 
       width: 290px;
     }
 
@@ -19,7 +19,7 @@ const BoxStyle = styled.div`
     .logo {
       margin-top: 70px;
       display: grid;
-      place-items: center;
+      place-items: center; 
     }
   }
   .login-box {

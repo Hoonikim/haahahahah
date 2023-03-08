@@ -82,7 +82,7 @@ const Text = styled.div`
   bottom: 15px;
   left: 40px;
 `;
-const CaptchaLogoImg = styled.img`
+const CaptchaLogoImg = styled.img` 
   width: 120px;
   height: 40px;
   position: relative;
