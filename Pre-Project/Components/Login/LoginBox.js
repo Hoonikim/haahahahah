@@ -85,7 +85,7 @@ const LoginBox = () => {
                 <Link to='/'>
                   <SOiconSVG />
                 </Link>
-              </div>
+              </div> 
               <OAuthBox />
             </div>
           </div>

@@ -415,7 +415,7 @@ export default function LoginNav({ setIsLogin }) {
           </UsersNavigation>
         ) : null}
       </button>
-    </SvgList> 
+    </SvgList>  
   );  
 }
   

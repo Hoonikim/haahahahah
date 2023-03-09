@@ -198,7 +198,7 @@ const Inputbox = () => {
               least 1 letter and 1 number.
             </div>
           </div>
-          <Captcha />
+          <Captcha /> 
           <GeneralBtn BtnText='Sign up' onClick={handleSubmit} />
         </div>
       </InputboxStyle>
