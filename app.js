@@ -9,7 +9,7 @@ function App() {
       <GlobalStyles /> 
       <BrowserRouter>
         <Routes>
-          <Route path='/login' element={<LoginP />} />
+          <Route path='/login' element={<LoginP />} /> 
           <Route path='/signup' element={<SignupP />} />
         </Routes>
       </BrowserRouter>
