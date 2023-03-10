@@ -10,7 +10,7 @@ const BoxStyle = styled.div`
     @media (max-width: 640px) { 
       width: 290px;
     }
-
+ 
     .oauth-box {
       display: grid;
       grid-template-rows: repeat(2, 1fr);
