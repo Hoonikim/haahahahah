@@ -83,7 +83,7 @@ const LoginBox = () => {
             <div className='oauth-box'>
               <div className='logo'>
                 <Link to='/'>
-                  <SOiconSVG />
+                  <SOiconSVG /> 
                 </Link>
               </div> 
               <OAuthBox />
