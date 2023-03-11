@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const BoxStyle = styled.div`
   grid-column-start: 2;
-  .all-box {
+  .all-box { 
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     row-gap: 20px;

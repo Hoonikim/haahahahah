@@ -82,8 +82,8 @@ const LoginBox = () => {
           <div className='all-oauth-box'>
             <div className='oauth-box'>
               <div className='logo'>
-                <Link to='/'>
-                  <SOiconSVG />
+                <Link to='/'> 
+                  <SOiconSVG /> 
                 </Link>
               </div> 
               <OAuthBox />

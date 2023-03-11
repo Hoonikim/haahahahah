@@ -19,7 +19,7 @@ export const ErrorIcon = () => {
     return (
       <svg 
         aria-hidden='true'
-        className='va-text-bottom sm:d-none svg-icon iconShareSm'
+        className='va-text-bottom sm:d-none svg-icon  iconShareSm'
         width='14'
         height='14'
         viewBox='0 0 14 14' 
