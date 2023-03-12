@@ -4,7 +4,7 @@ import SignupP from './pages/SignupP';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'; 
 
 function App() {
-  return (
+  return ( 
     <> 
       <GlobalStyles /> 
       <BrowserRouter>

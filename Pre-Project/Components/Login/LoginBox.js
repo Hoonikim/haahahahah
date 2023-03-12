@@ -82,12 +82,12 @@ const LoginBox = () => {
           <div className='all-oauth-box'>
             <div className='oauth-box'>
               <div className='logo'>
-                <Link to='/'> 
+                <Link to='/'>  
                   <SOiconSVG /> 
                 </Link>
               </div> 
               <OAuthBox />
-            </div>
+            </div> 
           </div>
           {/* 로그인 박스  */}
           <div className='login-box'>
