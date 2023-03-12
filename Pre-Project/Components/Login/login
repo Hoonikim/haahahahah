@@ -40,7 +40,7 @@ export default LoginP;
 }
 .all_box {
   grid-area: content;
-  background: yellow;
+  background: yellow; 
 }
 .svg_box {
   grid-area: content;
