@@ -6,7 +6,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 const CommentContainer = styled.div` 
-  display: flex;
+  display: flex; 
   flex-direction: column;
   justify-content: space-between;
   padding-bottom: 15px; 
