@@ -9,7 +9,7 @@ const CommentContainer = styled.div`
   display: flex; 
   flex-direction: column;
   justify-content: space-between;
-  padding-bottom: 15px; 
+  padding-bottom: 15px;  
   > div {
     > .add-comment-btn {
       margin-top: 8px;
